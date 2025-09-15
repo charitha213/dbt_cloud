@@ -33,6 +33,13 @@ with
             claim_number,
             claim_type,
             description,
+            case
+                when claim_amount > 10000
+                then 'HIGH'
+                when claim_amount > 5000
+                then 'MEDIUM'
+                else 'LOW'
+            end as claim_severity,
             status
         from {{ ref("bronze_claims_dbt") }}
     ),
