@@ -68,5 +68,5 @@ select
     last_update_time,
     upper(claim_number) as claim_number,
     initcap(claim_type) as claim_type,
-    status,
+    status
 from cleaned
