@@ -6,7 +6,7 @@ my_new_project:
       method: http
       host: dbc-dc546b57-d9c2.cloud.databricks.com
       http_path: /sql/1.0/warehouses/81e07b3dca510f19
-      token: "{{ env_var('DATABRICKS_TOKEN') }}"
+      token: "{{ env_var('DBT_ACCESS_TOKEN') }}"
       schema: dbt  # e.g., gold, silver, etc.
       database: insurance  # e.g., hive_metastore, or unity catalog name
       threads: 1
